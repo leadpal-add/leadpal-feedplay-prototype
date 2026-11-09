@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeadPal × FeedPlay Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="lp">LeadPal</span> × <span class="fp">FeedPlay</span></div>
+    <span class="badge">Prototype v1.0</span>
+  </header>
+
+  <main class="wrap">
+    <section class="player-col">
+      <h1>In-video lead capture</h1>
+      <p class="sub">The LeadPal form appears over the FeedPlay player at 10 seconds. Viewers enter their email to keep watching.</p>
+
+      <div class="player" id="player">
+        <video id="video" controls playsinline preload="metadata"
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+        <div class="overlay hidden" id="overlay">
+          <div class="card">
+            <h2>Get the full guide</h2>
+            <p>Enter your email to keep watching.</p>
+            <form id="leadForm">
+              <input type="email" id="email" placeholder="you@company.com" required>
+              <button type="submit">Continue watching</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <p class="note">Prototype only: leads are kept in this browser tab and are not sent anywhere.</p>
+    </section>
+
+    <aside class="side">
+      <h3>Captured leads (demo)</h3>
+      <ul id="leads" class="leads"><li class="empty">No leads yet.</li></ul>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
