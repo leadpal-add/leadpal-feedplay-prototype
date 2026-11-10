@@ -3,25 +3,43 @@ body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, san
 .top { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: #111827; color: #fff; }
 .brand { font-weight: 700; font-size: 18px; }
 .lp { color: #4ade80; } .fp { color: #60a5fa; }
-.badge { font-size: 12px; background: #374151; padding: 4px 10px; border-radius: 999px; }
-.wrap { display: grid; grid-template-columns: 1fr 300px; gap: 24px; max-width: 1180px; margin: 24px auto; padding: 0 16px; }
+.badge { font-size: 12px; background: #2563eb; padding: 4px 10px; border-radius: 999px; }
+.wrap { display: grid; grid-template-columns: 1fr 320px; gap: 24px; max-width: 1200px; margin: 24px auto; padding: 0 16px; }
 h1 { margin: 0 0 6px; font-size: 24px; }
 .sub { margin: 0 0 16px; color: #4b5563; }
 .player { position: relative; background: #000; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; }
 .player video { width: 100%; height: 100%; display: block; }
 .overlay { position: absolute; inset: 0; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; }
-.hidden { display: none; }
-.card { background: #fff; border-radius: 12px; padding: 24px; width: min(360px, 90%); text-align: center; }
-.card h2 { margin: 0 0 6px; font-size: 20px; }
-.card p { margin: 0 0 14px; color: #4b5563; }
-form { display: flex; flex-direction: column; gap: 10px; }
-input { padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 15px; }
-button { padding: 10px 12px; border: 0; border-radius: 8px; background: #16a34a; color: #fff; font-weight: 600; font-size: 15px; cursor: pointer; }
+.hidden { display: none !important; }
+.card { background: #fff; border-radius: 12px; padding: 22px; width: min(380px, 92%); text-align: center; max-height: 96%; overflow: auto; }
+.card h2 { margin: 0 0 4px; font-size: 20px; }
+.card p { margin: 0 0 12px; color: #4b5563; }
+.social { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+.soc { color: #fff; }
+.soc.google { background: #db4437; } .soc.google:hover { background: #c1351d; }
+.soc.facebook { background: #1877f2; } .soc.facebook:hover { background: #0f63d0; }
+.soc.linkedin { background: #0a66c2; } .soc.linkedin:hover { background: #084f96; }
+.or { display: flex; align-items: center; gap: 8px; color: #9ca3af; font-size: 12px; margin-top: 2px; }
+.or::before, .or::after { content: ""; flex: 1; height: 1px; background: #e5e7eb; }
+.sim { font-size: 13px; background: #eff6ff; color: #1e3a8a !important; padding: 8px; border-radius: 6px; }
+form { display: flex; flex-direction: column; gap: 8px; }
+input, select { padding: 9px 11px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; width: 100%; }
+button { padding: 10px 12px; border: 0; border-radius: 8px; background: #16a34a; color: #fff; font-weight: 600; font-size: 14px; cursor: pointer; }
 button:hover { background: #15803d; }
+button:disabled { opacity: .5; cursor: default; }
+.skip { background: transparent; color: #6b7280; margin-top: 8px; font-weight: 500; }
+.skip:hover { background: #f3f4f6; }
+.ghost { background: #f3f4f6; color: #111827; width: 100%; margin-top: 10px; }
+.ghost:hover { background: #e5e7eb; }
 .note { font-size: 13px; color: #6b7280; }
 .side { background: #fff; border-radius: 10px; padding: 16px; height: fit-content; border: 1px solid #e5e7eb; }
 .side h3 { margin: 0 0 10px; font-size: 16px; }
-.leads { list-style: none; margin: 0; padding: 0; font-size: 14px; }
-.leads li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
-.leads .empty { color: #9ca3af; }
-@media (max-width: 860px) { .wrap { grid-template-columns: 1fr; } }
+.side .mt { margin-top: 20px; }
+.side label { display: block; font-size: 13px; color: #374151; margin-bottom: 10px; }
+.side label select { margin-top: 4px; }
+.leads { width: 100%; border-collapse: collapse; font-size: 13px; }
+.leads th { text-align: left; color: #6b7280; font-weight: 600; border-bottom: 1px solid #e5e7eb; padding: 6px 4px; }
+.leads td { padding: 6px 4px; border-bottom: 1px solid #f3f4f6; }
+.leads .empty td { color: #9ca3af; }
+.stats { display: flex; justify-content: space-between; font-size: 13px; margin-top: 10px; color: #374151; }
+@media (max-width: 880px) { .wrap { grid-template-columns: 1fr; } }
